@@ -123,25 +123,25 @@ const Tabs = () => {
       </div>
 
       {/* Tabs (Header Section) or the Menu icons */}
-      <div className="flex relative top-14 md:top-7 mx-2  rounded-md overflow-x-scroll md:overflow-visible  sm:justify-center">
-        <div className="flex text-black gap-4  rounded-md  justify-center py-2 px-3 overflow-visible  backdrop-blur-sm bg-white/20 ">
-          {tabs.map((tab, index) => (
+      <div className="flex md:top-7 mx-2 relative -bottom-10  rounded-md  md:overflow-visible  justify-center">
+        <div className="flex items-center overflow-x-scroll  text-black gap-4 rounded-lg justify-center  md:overflow-visible  py-2 px-3  bg-white/20  backdrop-blur-sm  ">
+          <div className="flex overflow-x-scroll md:overflow-visible  gap-x-4">
+            {tabs.map((tab, index) => (
+              <button
+                key={index}
+                className={`h-10 w-10  text-3xl  p-2 flex justify-center items-center font-medium rounded-md   ${
+                  activeTab === index ? "bg-blue-500 text-white" : "bg-gray-300"
+                }  transition ease-in-out  bg-blue-500 md:hover:-translate-y-2 md:hover:scale-125 hover:text-white hover:bg-indigo-600 duration-300`}
+                onClick={() => {
+                  setActiveTab(index);
+                  tap();
+                }}
+              >
+                {tab.name}
+              </button>
+            ))}
             <button
-              key={index}
-              className={`h-10 w-10  text-3xl sm:text-2xl p-2 flex justify-center items-center font-medium rounded-md   ${
-                activeTab === index ? "bg-blue-500 text-white" : "bg-gray-300"
-              }  transition ease-in-out  bg-blue-500 hover:-translate-y-2 hover:scale-125 hover:text-white hover:bg-indigo-600 duration-300`}
-              onClick={() => {
-                setActiveTab(index);
-                tap();
-              }}
-            >
-              {tab.name}
-            </button>
-          ))}
-          <div>
-            <button
-              className="h-10 w-10  flex justify-center items-center bg-white/30  backdrop-blur-md text-black dark:text-white   hover:bg-yellow-500   rounded-lg"
+              className="h-10 w-10 py-2 px-3 flex justify-center items-center bg-white  text-black  rounded-lg"
               onClick={scrollToTop}
             >
               <FontAwesomeIcon icon={faAnglesUp} />

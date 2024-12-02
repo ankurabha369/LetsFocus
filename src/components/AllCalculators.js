@@ -17,12 +17,10 @@ const DesmosCalculators = () => {
   return (
     <div className="calculator-container mt-4">
       {/* Buttons to switch between calculators */}
-      <div className="flex justify-center overflow-x-auto rounded-md">
-        <h1 className="text-white  font-serif mb-4 md:px-4 md:py-2 mx-4 mt-4">
-          Calculator
-        </h1>
+      <h1 className="text-white text-center  font-serif mt-1">Calculator</h1>
 
-        <div className="flex text-black font-serif text-xs  mb-4">
+      <div className="flex justify-center rounded-md">
+        <div className="flex text-black overflow-x-auto  font-serif text-xs  mb-4">
           <button
             className={`px-4 py-2 mx-2 mt-4 rounded-md ${
               calculatorType === "fourfunction"

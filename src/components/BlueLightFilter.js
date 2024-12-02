@@ -20,10 +20,10 @@ const BlueLightFilter = () => {
   return (
     <button
       onClick={toggleFilter}
-      className={`px-4 py-2 text-[#0f0f0f]  h-8 w-8 md:h-10 md:w-10 flex justify-center items-center shadow-md rounded-lg ${
+      className={`px-4 py-2   h-8 w-8 md:h-10 md:w-10 flex justify-center items-center shadow-md rounded-lg ${
         isFilterOn
-          ? "bg-yellow-200 text-[#0f0f0f]"
-          : "bg-white/30 text-[#0f0f0f]"
+          ? " bg-yellow-200 text-[#0f0f0f]"
+          : "bg-white/30 text-[#0f0f0f] dark:text-white"
       } focus:outline-none`}
     >
       {isFilterOn ? (

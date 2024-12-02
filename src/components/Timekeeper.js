@@ -41,9 +41,9 @@ const Tabs = () => {
   ];
 
   return (
-    <div className="w-full mt-4 p-4">
+    <div className="w-full mt-4 p-4 ">
       {/* Tabs (Header Section) */}
-      <div className="flex justify-center space-x-4  overflow-x-auto  ">
+      <div className="flex justify-center  space-x-4    ">
         {tabs.map((tab, index) => (
           <button
             key={index}

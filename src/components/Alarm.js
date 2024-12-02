@@ -39,17 +39,17 @@ const Alarm = () => {
   return (
     <div className="flex flex-col text-center">
       <h1 className="text-2xl text-white font-serif mb-4">Set Alarm</h1>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center flex-wrap gap-y-4 justify-center">
         <input
           type="time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
-          className="border text-3xl pl-4 pr-4 pt-3 pb-3 rounded-md bg-white text-black font-dotgothic"
+          className="text-2xl p-2 rounded-md bg-white text-black font-dotgothic"
         />
         <button
           onClick={setAlarm}
-          className="bg-green-500 hover:bg-green-600 rounded-lg text-xl font-serif text-white px-4
-           py-4 ml-2 "
+          className="bg-green-500 hover:bg-green-600 rounded-lg text-xm font-serif text-white px-4
+           py-3 ml-2 "
         >
           Done
         </button>

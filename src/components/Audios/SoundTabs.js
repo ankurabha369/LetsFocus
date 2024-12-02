@@ -1,10 +1,4 @@
-import React, { useState } from "react";
-import Nature from "./nature";
-import Animals from "./animals";
-import Places from "./places";
-import Noise from "./noise";
-import Things from "./things";
-import Transport from "./transport";
+import React, { useState, Suspense } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTree,
@@ -13,11 +7,18 @@ import {
   faCar,
   faKeyboard,
   faBrain,
+  faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 import GlobalMuteButton from "../globalMute";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0); // Active tab index
+  const Nature = React.lazy(() => import("./nature"));
+  const Animals = React.lazy(() => import("./animals"));
+  const Places = React.lazy(() => import("./places"));
+  const Noise = React.lazy(() => import("./noise"));
+  const Things = React.lazy(() => import("./things"));
+  const Transport = React.lazy(() => import("./transport"));
 
   // Define the tabs and their content in an array
   const tabs = [
@@ -25,7 +26,17 @@ const Tabs = () => {
       name: <FontAwesomeIcon icon={faTree} />,
       content: (
         <div>
-          <Nature />
+          {/* Wrap lazy-loaded components in Suspense */}
+          <Suspense
+            fallback={
+              <p className="text-center text-white m-2">
+                <FontAwesomeIcon icon={faSpinner} spinPulse />
+              </p>
+            }
+          >
+            <Nature />
+          </Suspense>
+          {/* <Nature /> */}
         </div>
       ),
     },
@@ -33,7 +44,16 @@ const Tabs = () => {
       name: <FontAwesomeIcon icon={faDove} />,
       content: (
         <div>
-          <Animals />
+          {/* Wrap lazy-loaded components in Suspense */}
+          <Suspense
+            fallback={
+              <p className="text-center text-white m-2">
+                <FontAwesomeIcon icon={faSpinner} spinPulse />
+              </p>
+            }
+          >
+            <Animals />
+          </Suspense>
         </div>
       ),
     },
@@ -41,7 +61,16 @@ const Tabs = () => {
       name: <FontAwesomeIcon icon={faPlaceOfWorship} />,
       content: (
         <div>
-          <Places />
+          {/* Wrap lazy-loaded components in Suspense */}
+          <Suspense
+            fallback={
+              <p className="text-center text-white m-2">
+                <FontAwesomeIcon icon={faSpinner} spinPulse />
+              </p>
+            }
+          >
+            <Places />
+          </Suspense>
         </div>
       ),
     },
@@ -49,7 +78,16 @@ const Tabs = () => {
       name: <FontAwesomeIcon icon={faCar} />,
       content: (
         <div>
-          <Transport />
+          {/* Wrap lazy-loaded components in Suspense */}
+          <Suspense
+            fallback={
+              <p className="text-center text-white m-2">
+                <FontAwesomeIcon icon={faSpinner} spinPulse />
+              </p>
+            }
+          >
+            <Transport />
+          </Suspense>
         </div>
       ),
     },
@@ -57,7 +95,16 @@ const Tabs = () => {
       name: <FontAwesomeIcon icon={faKeyboard} />,
       content: (
         <div>
-          <Things />
+          {/* Wrap lazy-loaded components in Suspense */}
+          <Suspense
+            fallback={
+              <p className="text-center text-white m-2">
+                <FontAwesomeIcon icon={faSpinner} spinPulse />
+              </p>
+            }
+          >
+            <Things />
+          </Suspense>{" "}
         </div>
       ),
     },
@@ -65,7 +112,16 @@ const Tabs = () => {
       name: <FontAwesomeIcon icon={faBrain} />,
       content: (
         <div>
-          <Noise />
+          {/* Wrap lazy-loaded components in Suspense */}
+          <Suspense
+            fallback={
+              <p className="text-center text-white m-2">
+                <FontAwesomeIcon icon={faSpinner} spinPulse />
+              </p>
+            }
+          >
+            <Noise />
+          </Suspense>
         </div>
       ),
     },
