@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/LetsFocus/static/css/main.4957e284.css",
-    "main.js": "/LetsFocus/static/js/main.6330deaa.js",
+    "main.js": "/LetsFocus/static/js/main.30147412.js",
     "static/js/885.4ea4ccf1.chunk.js": "/LetsFocus/static/js/885.4ea4ccf1.chunk.js",
     "static/js/451.6c84f994.chunk.js": "/LetsFocus/static/js/451.6c84f994.chunk.js",
     "static/js/309.21459c45.chunk.js": "/LetsFocus/static/js/309.21459c45.chunk.js",
@@ -81,7 +81,7 @@
     "static/media/switch.mp3": "/LetsFocus/static/media/switch.8fda3d0216815b4b16d8.mp3",
     "index.html": "/LetsFocus/index.html",
     "main.4957e284.css.map": "/LetsFocus/static/css/main.4957e284.css.map",
-    "main.6330deaa.js.map": "/LetsFocus/static/js/main.6330deaa.js.map",
+    "main.30147412.js.map": "/LetsFocus/static/js/main.30147412.js.map",
     "885.4ea4ccf1.chunk.js.map": "/LetsFocus/static/js/885.4ea4ccf1.chunk.js.map",
     "451.6c84f994.chunk.js.map": "/LetsFocus/static/js/451.6c84f994.chunk.js.map",
     "309.21459c45.chunk.js.map": "/LetsFocus/static/js/309.21459c45.chunk.js.map",
@@ -93,6 +93,6 @@
   },
   "entrypoints": [
     "static/css/main.4957e284.css",
-    "static/js/main.6330deaa.js"
+    "static/js/main.30147412.js"
   ]
 }
